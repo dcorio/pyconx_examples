@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template
+        id="pyconx_product"
+        inherit_id="website_sale.product"
+        customize_show="True"
+        name="Youtube Video">
+
+        <xpath expr="//div[@id='o-carousel-product']" position="after">
+            <iframe
+                width="546"
+                height="409"
+                t-attf-src="{{product.youtube_url}}"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen="allowfullscreen"/>
+        </xpath>
+
+    </template>
+
+</odoo>
